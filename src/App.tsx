@@ -709,7 +709,7 @@ return (
         className="space-y-5"
       >
        {/* --- SOLO QUI: SEZIONE WI-FI PULITA (niente testi duplicati) --- */}
-      {activeCategory?.key === "wifi" && content.wifi && (
+      {activeCategory?.key === "wifi" && content.wifi && ((content.wifi.ssid || "").trim() || (content.wifi.password || "").trim()) && (
   <div>
     {/* Titolo */}
     <h2
